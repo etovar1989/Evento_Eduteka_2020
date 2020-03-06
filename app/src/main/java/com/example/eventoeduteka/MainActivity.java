@@ -28,12 +28,14 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+
     EditText edtUsuario,edtClave;
     Button btnLogin;
 
     String usuario;
     String clave;
     String nombres;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         edtUsuario = findViewById( R.id.edtUsuario );
         edtClave = findViewById( R.id.edtClave );
         btnLogin = findViewById( R.id.btnLogin );
+
+
 
         recuperarPreferencias();
 
@@ -62,10 +66,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
 
+
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_CALENDAR)
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission is not granted
         }
+
 
     }
 
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue= Volley.newRequestQueue( this );
         requestQueue.add( stringRequest );
     }
+
 
 
 
@@ -198,8 +205,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).show();
     }
-
-
 
 
 }
